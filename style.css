@@ -6,8 +6,12 @@
 
 :root {
     --bg-color-primary: #000000;
+    --bg-color-secondary: #0a0c15;
+    --bg-color-tertiary: #6e1cea;
     --fc-primary: #c1bae7;
     --fc-secondary: #9299a4;
+    --fc-focus-nav: #f5eefd;
+    --border-color-primary: #131722;
 }
 
 body {
@@ -45,4 +49,88 @@ h1 {
     font-size: 14px;
 
     color: var(--fc-secondary);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    height: 3rem;
+
+    background-color: var(--bg-color-secondary);
+
+    border-radius: 8px;
+    border: 1px solid var(--border-color-primary);
+
+    padding: 8px;
+
+    gap: 2rem;
+
+    margin-top: 1.5rem;
+}
+
+nav img {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.navTimers {
+    display: flex;
+
+    gap: 1px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.navTimer {
+    display: flex;
+    align-items: center;
+
+    gap: 1.2rem;
+
+    height: 2rem;
+
+    padding: 5px 1.2rem;
+
+    border-radius: 8px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+}
+
+#settings:hover {
+    filter: brightness(150%);
+}
+
+.navTimer img {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.navTimer span {
+    font-size: 0.8rem;
+
+    color: var(--fc-secondary);
+}
+
+.navTimer:focus {
+    background-color: var(--bg-color-tertiary);
+    filter: brightness(125%);
+}
+
+.navTimer:focus span {
+    color: var(--fc-focus-nav);
 }
