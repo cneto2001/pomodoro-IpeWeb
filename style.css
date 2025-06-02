@@ -5,7 +5,9 @@
 }
 
 :root {
-    --bg-color-primary: #000000
+    --bg-color-primary: #000000;
+    --fc-primary: #c1bae7;
+    --fc-secondary: #9299a4;
 }
 
 body {
@@ -18,4 +20,29 @@ body {
     padding: 8px 0;
 
     top: 50%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1rem;
+}
+
+.websiteTitle {
+    display: flex;
+    
+    gap: 6px;
+}
+
+h1 {
+    color: var(--fc-primary);
+}
+
+.websiteTitle + span {
+    font-size: 14px;
+
+    color: var(--fc-secondary);
 }
