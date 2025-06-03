@@ -8,10 +8,13 @@
     --bg-color-primary: #000000;
     --bg-color-secondary: #0a0c15;
     --bg-color-tertiary: #6e1cea;
+    --bg-color-input: #151b28;
+
     --fc-primary: #c1bae7;
     --fc-secondary: #9299a4;
     --fc-focus-nav: #f5eefd;
-    --border-color-primary: #131722;
+
+    --border-color-primary: #202734;
 }
 
 body {
@@ -26,7 +29,7 @@ body {
     top: 50%;
 }
 
-header {
+#websiteHeader {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +44,7 @@ header {
     gap: 6px;
 }
 
-h1 {
+.websiteTitle h1 {
     color: var(--fc-primary);
 }
 
@@ -133,4 +136,193 @@ button:hover {
 
 .navTimer:focus span {
     color: var(--fc-focus-nav);
+}
+
+main {
+    display: flex;
+
+    margin-top: 2rem;
+    
+    gap: 4rem;
+}
+
+.cronometerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cronometer {
+    min-width: 12rem;
+    min-height: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    border: 4px solid var(--border-color-primary);
+}
+
+.cronometer h1 {
+    color: white;
+}
+
+.cronometer span {
+    color: var(--fc-secondary);
+}
+
+.cronometerButtons {
+    display: flex;
+
+    margin-top: 2rem;
+    
+    gap: 8px;
+}
+
+.cronometerButtons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1.8rem;
+
+    background-color: var(--bg-color-tertiary);
+
+    color: var(--fc-primary);
+    
+    padding: 4px 1.3rem;
+    border-radius: 0.75rem;
+
+    gap: 8px;
+}
+
+.cronometerButtons button:hover {
+    filter: brightness(125%);
+}
+
+#startButton img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+#resetButton img{
+    width: 1rem;
+    height: 1rem;
+}
+
+section {
+    width: 25rem;
+    min-height: 20rem;
+
+    background-color: var(--bg-color-secondary);
+
+    border-radius: 6px;
+    border: 1px solid var(--border-color-primary);
+
+    padding: 1rem;
+}
+
+section h3 {
+    color: white;
+}
+
+.tasksHeader {
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+}
+
+.purpleCircle {
+    width: 10px;
+    height: 10px;
+    
+    background-color: var(--bg-color-tertiary);
+    
+    border-radius: 50%;
+}
+
+.tasksInput {
+    display: flex;
+
+    gap: 0.5rem;
+
+    margin-top: 1rem;
+}
+
+.tasksInput input {
+    width: 100%;
+
+    color: var(--fc-secondary);
+
+    background-color: var(--bg-color-input);
+    
+    border-radius: 8px;
+    border: 1px solid var(--border-color-primary);
+    outline: none;
+
+    padding: 0 0.75rem;
+}
+
+.tasksInput input::placeholder {
+    color: var(--fc-secondary);
+}
+
+.tasksInput button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2.5rem;
+    height: 1.8rem;
+
+    background-color: var(--bg-color-tertiary);
+
+    border-radius: 8px;
+}
+
+.tasksInput button:hover {
+    filter: brightness(125%);
+}
+
+.tasksInput button img {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 3rem;
+}
+
+#tasksPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--fc-secondary);
+}
+
+#tasksPlaceholder img{
+    width: 4rem;
+    height: 4rem;
+
+    opacity: 50%;
+}
+
+#tasksPlaceholderHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
