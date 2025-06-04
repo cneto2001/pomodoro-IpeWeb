@@ -311,6 +311,8 @@ section h3 {
     align-items: center;
 
     color: var(--fc-secondary);
+
+    gap: 0.75rem;
 }
 
 #tasksPlaceholder img{
@@ -325,4 +327,6 @@ section h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    gap: 0.33rem;
 }
