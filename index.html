@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="websiteHeader">
         <div class="websiteTitle">
             <img src="assets/timer.svg" alt="Purple cronometer icon">
             <h1>Pomo Flow</h1>
@@ -40,6 +40,54 @@
             <img src="assets/cog.svg" alt="Engrenagem - Configurações">
         </button>
     </nav>
+
+    <main>
+        <div class="cronometerWrapper">
+            <div class="cronometer">
+                <h1 class="remainingTime">
+                    25 : 00
+                </h1>
+                <span id="status">AGUARDANDO..</span>
+            </div>
+
+            <div class="cronometerButtons">
+                <button id="startButton">
+                    <img src="assets/start-button.svg" alt="Seta de 'play' virada para a direita">
+                    <span>Iniciar</span>
+                </button>
+
+                <button id="resetButton">
+                    <img src="assets/restart.svg" alt="Seta de 'reset' circular">
+                    <span>Resetar</span>
+                </button>
+            </div>
+        </div>
+
+        <section>
+            <div class="tasksHeader">
+                <div class="purpleCircle"></div>
+                <h3>Tarefas</h3>
+            </div>
+
+            <div class="tasksInput">
+                <input type="text" placeholder="O que precisa ser feito?">
+                <button>
+                    <img src="assets/plus.svg" alt="Sinal de Mais">
+                </button>
+            </div>
+
+            <div id="tasks">
+                <div id="tasksPlaceholder">
+                    <img src="assets/tasks-placeholder.svg" alt="Lápis amarelo escrevendo em papel">
+                    
+                    <header id="tasksPlaceholderHeader">
+                        <h4>Nenhuma tarefa ainda</h4>
+                        <p>Adicione uma tarefa para começar</p>
+                    </header>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="scripts/buttonScripts.js"></script>
     <script src="scripts/configTime.js"></script>
