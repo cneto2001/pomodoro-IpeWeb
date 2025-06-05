@@ -19,7 +19,6 @@
 
     <nav>
         <div class="navTimers">
-            
             <button class="navTimer">
                 <img src="assets/timer-gray.svg" alt="Cronômetro">
                 <span>Foco (25min)</span>
@@ -51,10 +50,17 @@
             </div>
 
             <div class="cronometerButtons">
-                <button id="startButton" onclick="startTimer()">
-                    <img src="assets/start-button.svg" alt="Seta de 'play' virada para a direita">
-                    <span>Iniciar</span>
-                </button>
+                <div class="startButtonWrapper">
+                    <button id="pauseButton" onclick="pauseTimer()">
+                        <img src="assets/pause-button.svg" alt="Botão de Pause">
+                        <span>Pausar</span>
+                    </button>
+
+                    <button id="startButton" onclick="startTimer()">
+                        <img src="assets/start-button.svg" alt="Seta de 'play' virada para a direita">
+                        <span>Iniciar</span>
+                    </button>
+                </div>
 
                 <button id="resetButton" onclick="resetTimer()">
                     <img src="assets/restart.svg" alt="Seta de 'reset' circular">
