@@ -44,19 +44,19 @@
     <main>
         <div class="cronometerWrapper">
             <div class="cronometer">
-                <h1 class="remainingTime">
+                <h1 id="remainingTime">
                     25 : 00
                 </h1>
                 <span id="status">AGUARDANDO..</span>
             </div>
 
             <div class="cronometerButtons">
-                <button id="startButton">
+                <button id="startButton" onclick="startTimer()">
                     <img src="assets/start-button.svg" alt="Seta de 'play' virada para a direita">
                     <span>Iniciar</span>
                 </button>
 
-                <button id="resetButton">
+                <button id="resetButton" onclick="resetTimer()">
                     <img src="assets/restart.svg" alt="Seta de 'reset' circular">
                     <span>Resetar</span>
                 </button>
