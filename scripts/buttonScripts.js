@@ -36,12 +36,28 @@ function resetTimer() {
 
 function pauseTimer() {
     isPaused = true;
-    isRunning = false;
 }
 
-startButton.addEventListener("click", function () {
-    if (isRunning === false) {
-        startButton.style.display = "none"
+const pauseButton = document.getElementById("pauseButton");
 
-    }
+startButton.addEventListener("click", function () {
+    startButton.style.display = "none";
+    pauseButton.style.display = "flex";
+});
+
+pauseButton.addEventListener("click", function () {
+    startButton.style.display = "flex";
+    pauseButton.style.display = "none";
+});
+
+const resetButton = document.getElementById("resetButton");
+
+resetButton.addEventListener("click", function () {
+    clearInterval(intervalId);
+
+    isPaused = false;
+    isRunning = false;
+
+    startButton.style.display = "flex";
+    pauseButton.style.display = "none";
 });
